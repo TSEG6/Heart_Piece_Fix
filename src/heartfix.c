@@ -16,12 +16,10 @@ void PickupCheck(Player* this, PlayState* play) {
     if (this->getItemId == GI_HEART_PIECE && (GET_QUEST_HEART_PIECE_COUNT == 3)) {
         shouldStopFanfare = true;
         hasPlayedFanfare = false;
-       recomp_printf("It's Fanfare Time");
     }
     else {
         shouldStopFanfare = false;
         hasPlayedFanfare = false;
-        recomp_printf("It's Not Fanfare Time");
     }
 }
 
@@ -31,7 +29,6 @@ void StopNormalFanfare(PlayState* play) {
         sFanfareState = 0;
         Audio_PlayFanfare(NA_BGM_GET_HEART);
         hasPlayedFanfare = true;
-        recomp_printf("Fanfare Played");
     }
 }
 
@@ -41,7 +38,6 @@ void ResetFanfare(PlayState* play) {
     if (hasPlayedFanfare) {
 
         hasPlayedFanfare = false;
-        recomp_printf("Fanfare Reset");
 
     }
 
